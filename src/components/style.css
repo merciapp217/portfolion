@@ -1,0 +1,47 @@
+body {
+  background-color: #f3f3ef;
+  color: #111;
+  font-family: 'Open Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1, h2 {
+  font-size: 64px;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+p {
+  line-height: 40px;
+}
+
+h1::before, h2::before, h3::before {
+  background-color: #d2b356;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin-top: 30px;
+}
+
+/* ホーム */
+/* プロフィール */
+/* スキル */
+/* コンタクト */
