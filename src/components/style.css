@@ -1,38 +1,70 @@
+html {
+  font-size: 62.5%;
+}
 body {
   background-color: #f3f3ef;
   color: #111;
   font-family: 'Open Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   font-size: 18px;
+  font-size: 1.8rem;
   font-weight: normal;
 }
-
+a {
+  text-decoration: none;
+}
 .text-right {
   text-align: right;
 }
-
 .text-left {
   text-align: left;
 }
-
 .text-center {
   text-align: center;
 }
-
-h1, h2 {
-  font-size: 64px;
+h1 {
+  font-size: 40px;
+  font-size: 4.0rem;
   font-weight: bolder;
 }
-
+h2 {
+  font-size: 64px;
+  font-size: 6.4rem;
+  font-weight: bolder;
+  text-align: center;
+}
 h3 {
   font-size: 32px;
+  font-size: 3.2rem;
   font-weight: bold;
 }
-
 p {
   line-height: 40px;
 }
 
-h1::before, h2::before, h3::before {
+h2::after, h3::after {
+  background-color: #d2b356;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin-top: 8px;
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  text-align: center;
+}
+header > nav li {
+  display: inline-block;
+}
+
+/* ホーム */
+/* #index {
+  background: url(.) no-repeat center top;
+  background-size: cover;
+} */
+#index h2::before {
   background-color: #d2b356;
   content: "";
   display: block;
@@ -41,7 +73,24 @@ h1::before, h2::before, h3::before {
   margin-top: 30px;
 }
 
-/* ホーム */
 /* プロフィール */
+#profile section {
+  display: flex;
+}
+#profile .profile-img {
+  border: solid 3px #d2b356;
+  width: 100%;
+}
+
 /* スキル */
+#skils section {
+  display: grid;
+}
+#skils section:nth-child(odd) {
+  background: #fff;
+}
+
 /* コンタクト */
+#contact section {
+  display: grid;
+}
