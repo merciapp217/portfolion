@@ -59,6 +59,12 @@ header > nav li {
   display: inline-block;
 }
 
+header > nav a {
+  display: block;
+  margin: 0 16px;
+  padding: 16px 0;
+}
+
 /* ホーム */
 /* #index {
   background: url(.) no-repeat center top;
@@ -83,11 +89,12 @@ header > nav li {
 }
 
 /* スキル */
-#skils section {
-  display: grid;
-}
 #skils section:nth-child(odd) {
   background: #fff;
+}
+#skils ul {
+  display: grid;
+  grid-template: 100px / repeat(3, 1fr);
 }
 
 /* コンタクト */

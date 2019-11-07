@@ -4,6 +4,14 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import skilsFile from "../json/skils.json";
+
+const front = skilsFile.frontendDevelopment.map((data, index) =>
+  <li key={index}>
+    <img src={'../' + data.img} alt={data.name} />
+    <p>{data.name}</p>
+  </li>
+);
 
 const SkilsPage = () => (
   <Layout>
@@ -12,6 +20,7 @@ const SkilsPage = () => (
       <h2>SKILS</h2>
       <section id="front">
         <h3>FRONTEND DEVELOPMENT</h3>
+        <ul>{front}</ul>
       </section>
       <section id="back">
         <h3>BACKEND DEVELOPMENT</h3>

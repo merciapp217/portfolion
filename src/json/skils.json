@@ -1,0 +1,61 @@
+
+{
+  "frontendDevelopment":[
+    {
+      "name": "HTML5",
+      "img": "html5.png"
+    },
+    {
+      "name": "CSS3",
+      "img": "css3.png"
+    },
+    {
+      "name": "JavaScript",
+      "img": "javascript.png"
+    },
+    {
+      "name": "jQuery",
+      "img": "jquery.png"
+    },
+    {
+      "name": "React",
+      "img": "react.png"
+    },
+    {
+      "name": "CofeeScript",
+      "img": "cofeescript.png"
+    }
+  ],
+  "backendDevelopment":[
+    {
+      "name": "Ruby",
+      "img": "ruby.png"
+    },
+    {
+      "name": "PHP",
+      "img": "php.png"
+    },
+    {
+      "name": "MySql",
+      "img": "mysql.png"
+    }
+  ],
+  "developmentOperations":[
+    {
+      "name": "AWS",
+      "img": "aws.png"
+    },
+    {
+      "name": "Linux",
+      "img": "linux.png"
+    },
+    {
+      "name": "Git",
+      "img": "git.png"
+    },
+    {
+      "name": "Slack",
+      "img": "slack.png"
+    }
+  ]
+}
