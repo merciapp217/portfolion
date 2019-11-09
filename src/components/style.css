@@ -57,6 +57,13 @@ h3::after {
   margin: 10px 0 0 0;
 }
 
+#profile section,
+#skils section div {
+  max-width: 1240px;
+  padding: 20px 80px;
+  margin: 0 auto;
+}
+
 /* ヘッダー */
 header {
   display: flex;
@@ -92,11 +99,13 @@ header > nav a {
 #profile section {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 #profile .profile-img {
   border: solid 3px #d2b356;
-  width: 100%;
+}
+#profile p {
+  flex-basis: 60%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -108,11 +117,6 @@ header > nav a {
 /* スキル */
 #skils section:nth-child(even) {
   background: #fff;
-}
-#skils section div {
-  max-width: 1240px;
-  padding: 20px 80px;
-  margin: 0 auto;
 }
 #skils ul {
   padding: 0 80px;
