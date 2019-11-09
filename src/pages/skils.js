@@ -6,12 +6,17 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import skilsFile from "../json/skils.json";
 
-const front = skilsFile.frontendDevelopment.map((data, index) =>
-  <li key={index}>
-    <img src={'../' + data.img} alt={data.name} />
-    <p>{data.name}</p>
-  </li>
-);
+function SkillsList(list) {
+  const img_path = "../image/product_logo/";
+  const content = list.map((data, index) =>
+    <li key={index}>
+      <div><img src={img_path + data.img} alt={data.name} /></div>
+      <p className="text-center">{data.name}</p> 
+    </li>
+  );
+
+  return content;
+}
 
 const SkilsPage = () => (
   <Layout>
@@ -19,14 +24,22 @@ const SkilsPage = () => (
     <article id="skils">
       <h2>SKILS</h2>
       <section id="front">
-        <h3>FRONTEND DEVELOPMENT</h3>
-        <ul>{front}</ul>
+        <div>
+          <h3>FRONTEND DEVELOPMENT</h3>
+          <ul>{SkillsList(skilsFile.frontendDevelopment)}</ul>
+        </div>
       </section>
       <section id="back">
-        <h3>BACKEND DEVELOPMENT</h3>
+        <div>
+          <h3>BACKEND DEVELOPMENT</h3>
+          <ul>{SkillsList(skilsFile.backendDevelopment)}</ul>
+        </div>
       </section>
       <section id="ops">
-        <h3>DEVELOPMENT OPERATIONS</h3>
+        <div>
+          <h3>DEVELOPMENT OPERATIONS</h3>
+          <ul>{SkillsList(skilsFile.developmentOperations)}</ul>
+        </div>
       </section>
     </article>
 

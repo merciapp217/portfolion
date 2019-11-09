@@ -56,7 +56,12 @@ typings/
 
 # gatsby files
 .cache/
-public
+
+
+public/*
+# imgモジュールを使いこなせなかったので一時的にpublicで管理する
+!public/image/
+
 
 # Mac files
 .DS_Store
