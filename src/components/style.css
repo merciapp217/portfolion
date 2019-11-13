@@ -10,6 +10,7 @@ body {
   font-weight: normal;
 }
 a {
+  color: black;
   text-decoration: none;
 }
 p {
@@ -76,19 +77,37 @@ h3::after {
 
 /* ヘッダー */
 header {
-  display: flex;
-  text-align: center;
   width: 100%;
-  height: 60px;
+  height: 50px;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  color: black;
 }
-header > nav li {
+.header {
+  max-width: 1240px;
+  padding: 0 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.header > nav li {
   display: inline-block;
 }
-header > nav a {
+.header > nav a {
   display: block;
   margin: 0 16px;
-  padding: 16px 0;
+  padding: 16.5px 0;
+  border-bottom: 3px solid;
+  border-color: #f3f3ef;
+  transition: all 0.3s ease-out;
+}
+.header .active {
+  color: #d2b356;
+  border-color: #d2b356;
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 0 10px;
+  }
 }
 
 /* ホーム */
