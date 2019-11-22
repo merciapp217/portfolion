@@ -3,59 +3,72 @@
   "frontendDevelopment":[
     {
       "name": "HTML5",
-      "img": "html5.png"
+      "img": "html5.png",
+      "content": "W3C標準に準拠してコーディングしています。"
     },
     {
       "name": "CSS3",
-      "img": "css3.png"
+      "img": "css3.png",
+      "content": "プロジェクトによってはSaasで書きます。"
     },
     {
       "name": "JavaScript",
-      "img": "javascript.png"
+      "img": "javascript.png",
+      "content": "フォームのバリデーションを厳密にしたい場合に使います。"
     },
     {
       "name": "jQuery",
-      "img": "jquery.png"
+      "img": "jquery.png",
+      "content": "PHP + Ajaxとセットでフォームを作ったりします"
     },
     {
       "name": "React",
-      "img": "react.png"
+      "img": "react.png",
+      "content": "Railsプロジェクトで綺麗なフロント作る時に使います。"
     },
     {
       "name": "CofeeScript",
-      "img": "cofeescript.png"
+      "img": "cofeescript.png",
+      "content": "古いRailsプロジェクトの場合に既存のコード修正しています。"
     }
   ],
   "backendDevelopment":[
     {
       "name": "Ruby",
-      "img": "ruby.png"
+      "img": "ruby.png",
+      "content": "手元で簡単なスクリプトを書くのに使います。"
     },
     {
       "name": "PHP",
-      "img": "php.png"
+      "img": "php.png",
+      "content": "LPのフォーム等々の使用がメインです。"
     },
     {
       "name": "MySql",
-      "img": "mysql.png"
+      "img": "mysql.png",
+      "content": "イルカ可愛い。"
     }
   ],
   "developmentOperations":[
     {
       "name": "AWS",
-      "img": "aws.png"
+      "img": "aws.png",
+      "content": "ミニマムなプロジェクト環境の構築ができます。"
     },
     {
       "name": "Linux",
-      "img": "linux.png"
+      "img": "linux.png",
+      "content": "個人的にCentOSが軽くて好きです。"
     },
     {
       "name": "Git",
-      "img": "git.png"
+      "img": "git.png",
+      "content": "GitLabやGitHubでのコードレビュー含めたチーム開発の経験有ります。"
     },
     {
       "name": "Slack",
-      "img": "slack.png"
+      "img": "slack.png",
+      "content": "`>>>`にすると後ろが全て引用になります。"
     }
   ]
 }

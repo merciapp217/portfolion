@@ -14,10 +14,13 @@ a {
   text-decoration: none;
 }
 p {
-  line-height: 40px;
+  line-height: 1.5;
 }
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 2.0;
 }
 .text-right {
   text-align: right;
@@ -57,7 +60,17 @@ h2::after, h3::after {
 h3::after {
   margin: 10px 0 0 0;
 }
+a:hover {
+  color: #d2b356;
+}
+.pc-none {
+  display: none;
+}
+.sp-none {
+  display: block;
+}
 
+/* TODO:sectionにmarginつけるのやめよう */
 #index,
 #profile section,
 #skils section div,
@@ -66,12 +79,35 @@ h3::after {
   padding: 20px 80px;
   margin: 0 auto;
 }
+/* #skils section {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+#skils section div {
+  padding: 20px 80px;
+} */
 @media only screen and (max-width: 768px) {
   #index,
   #profile section,
   #skils section div,
   #contact section {
     padding: 20px 10px;
+  }
+  h1 a,
+  h2 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: bolder;
+  }
+  h3::after {
+    height: 4px;
+    margin: 4px 0 0 0;
+  }
+  .pc-none {
+    display: block;
+  }
+  .sp-none {
+    display: none;
   }
 }
 
@@ -95,7 +131,7 @@ header {
 .header > nav a {
   display: block;
   margin: 0 16px;
-  padding: 16.5px 0;
+  padding: 5.5px 0;
   border-bottom: 3px solid;
   border-color: #f3f3ef;
   transition: all 0.3s ease-out;
@@ -108,6 +144,9 @@ header {
   .header {
     padding: 0 10px;
   }
+  .header > nav a {
+    margin: 0 12px;
+  }
 }
 
 /* ホーム */
@@ -116,10 +155,10 @@ header {
   position: relative;
 }
 #index span {
-  background: url(../../public/image/lion.png) no-repeat center top;
+  background: url(../../public/image/1336010.png) no-repeat center top;
   position: absolute;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: top center;
   height: 537px;
   width: 546px;
@@ -140,7 +179,7 @@ header {
   content: none;
 }
 @media only screen and (min-width: 769px) {
-  #index section div {
+  #index section .content {
     padding-top: 240px;
     max-width: 60%;
   }
@@ -149,14 +188,17 @@ header {
   #index section {
     flex-wrap: wrap;
   }
-  #index section div {
+  #index .content {
     padding-top: 0;
     margin: 0 auto;
   }
   #index h2::before {
     margin: 10px auto 0 auto;
   }
-  #index section div h2 {
+  #index .content h2 {
+    text-align: center;
+  }
+  #index .content p {
     text-align: center;
   }
   #index span {
@@ -169,19 +211,47 @@ header {
 /* プロフィール */
 #profile section {
   align-items: center;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
 }
 #profile .profile-img {
   border: solid 3px #d2b356;
+  margin-right: 24px;
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+  align-self: start;
 }
-#profile p {
-  flex-basis: 60%;
+#profile .content dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.0rem;
 }
-
+#profile .content dt {
+  width: 20%;
+}
+#profile .content dd {
+  width: 80%;
+  margin-bottom: 2.0rem;
+}
+#profile .text {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+}
 @media only screen and (max-width: 768px) {
   #profile section {
     flex-direction: column;
+  }
+  #profile .profile-img {
+    grid-row: 1 / 2;
+    margin: auto;
+  }
+  #profile .content {
+    margin-top: 32px;
+    grid-row: 2 / 3;
+  }
+  #profile .text {
+    grid-row: 3 / 4;
   }
 }
 
@@ -198,13 +268,13 @@ header {
 #skils li {
   margin: auto;
 }
-#skils li div {
+#skils .skil-img {
   width: 125px;
   height: 125px;
   text-align: center;
   position: relative;
 }
-#skils li div img {
+#skils .skil-img img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -216,7 +286,22 @@ header {
   max-height: 100%;
   margin: auto;
 }
-
+#skils p::after {
+  background-color: #d2b356;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: 0 auto;
+}
+#skils small {
+  display: inline-block;
+  line-height: 1.5;
+}
+#works .comming-soon {
+  transform: rotate(-15deg);
+  color: gray;
+}
 @media only screen and (max-width: 768px) {
   #skils ul {
     padding: 0;
@@ -224,45 +309,14 @@ header {
 }
 
 /* コンタクト */
-#contact section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-}
-.google-form {
-  grid-row: 1 / 3;
-  grid-column: 1 / 2;
-}
-.google-form iframe {
-  width: 640px;
+#contact .google-form iframe {
   height: 799px;
+  width: 100%;
   border: 0;
-  margin: 0;
-}
-.content {
-  grid-row: 1 / 1;
-  grid-column: 2 / 3;
-}
-.embedding-twitter {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
 }
 @media only screen and (max-width: 768px) {
-  #contact section {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-  .google-form {
-    grid-row: 2 / 4;
-    grid-column: 1 / 1;
-    margin: 0 auto;
-  }
-  .content {
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-  }
-  .embedding-twitter {
-    display: none;
+  .google-form iframe {
+    margin: 0;
   }
 }
 

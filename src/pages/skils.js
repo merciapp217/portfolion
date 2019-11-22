@@ -8,8 +8,9 @@ function SkillsList(list) {
   const img_path = "../image/product_logo/";
   const content = list.map((data, index) =>
     <li key={index}>
-      <div><img src={img_path + data.img} alt={data.name} /></div>
-      <p className="text-center">{data.name}</p> 
+      <div className="skil-img"><img src={img_path + data.img} alt={data.name} /></div>
+      <p className="text-center">{data.name}</p>
+      <small>{data.content}</small>
     </li>
   );
 
@@ -43,7 +44,7 @@ const SkilsPage = () => (
 
     <article id="works">
       <h2>WORKS</h2>
-      <p className="text-center">Comming Soon...</p>
+      <p className="text-center comming-soon">Comming Soon...</p>
     </article>
   </Layout>
 )
