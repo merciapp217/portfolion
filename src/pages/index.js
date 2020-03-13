@@ -10,7 +10,7 @@ const IndexPage = () => (
       <section>
         <div className="content">
           <h2>PORTFOLION</h2>
-          <p>める(<a href="https://twitter.com/wellxxx_" target="_blank" rel="noopener noreferrer">@wellxxx_</a>)のポートフォリオサイトです。<br />何となく作った物を纏めて行きます。</p>
+          <p>xxxxのポートフォリオサイトです。<br />何となく作った物を纏めて行きます。</p>
         </div>
         <span />
       </section>

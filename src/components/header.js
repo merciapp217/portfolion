@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
           <li><Link to="/profile/" activeClassName="active">Profile</Link></li>
           <li><Link to="/skils/" activeClassName="active">Skils</Link></li>
           <li><Link to="/contact/" activeClassName="active">Contact</Link></li>
-          <li><a href="https://yokohamasumitai.hatenablog.com/" target="_blank">Blog</a></li>
+          <li><a href="#" target="_blank">Blog</a></li>
         </ul>
       </nav>
     </div>
